@@ -1,7 +1,6 @@
 name: "CI Pipeline: Formatting, Linting, Typing, Security, and Tests (PyAgentSpec)"
 
 on:
-  pull_request:
   workflow_dispatch:
 
 env:
@@ -9,7 +8,7 @@ env:
 
 jobs:
   checks-and-tests:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     strategy:
       matrix:
         python-version: ['3.10', '3.11', '3.12', '3.13', '3.14']
